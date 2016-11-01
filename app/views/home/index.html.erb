@@ -1,2 +1,12 @@
-<h1>Welcome</h1>
-<p>This is a basic chat app</p>
+<h1>Rooms</h1>
+<div class='container'>
+  <% Room.all.each do |room| %>
+  <%= room.name %>
+  <% end %>
+
+  <%= form_for Room.new do |f| %>
+  <%= f.text_field :name %>
+  <%= f.submit "Create room" %>
+  <% end %>
+
+</div>
