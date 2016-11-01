@@ -1,12 +1,14 @@
 <h1>Rooms</h1>
 <div class='container'>
   <% Room.all.each do |room| %>
-  <%= room.name %>
+    <div>
+      <%= room.name   %> room
+    </div>
   <% end %>
 
   <%= form_for Room.new do |f| %>
-  <%= f.text_field :name %>
-  <%= f.submit "Create room" %>
+    <%= f.text_field :name %>
+    <%= f.submit "Create room" %>
   <% end %>
 
 </div>
