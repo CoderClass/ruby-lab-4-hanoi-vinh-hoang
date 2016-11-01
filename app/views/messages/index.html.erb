@@ -1,0 +1,9 @@
+<h1>Chat</h1>
+<% Message.all.each do |message| %>
+    <div><%= message.content %></div>
+<% end %>
+
+<%= form_for [@room, Message.new] do |f| %>
+    <%= f.text_field :content %>
+    <%= f.submit %>
+<% end %>

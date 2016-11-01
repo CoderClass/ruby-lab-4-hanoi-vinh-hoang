@@ -21,4 +21,9 @@ class RoomsController < ApplicationController
   def room_params
     params.require(:room).permit(:name)
   end
+
+  def show
+    @room = Room.find(params[:id])
+    redirect_to room_message_path(@room)
+  end
 end

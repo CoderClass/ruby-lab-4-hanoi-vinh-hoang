@@ -3,6 +3,7 @@
   <% Room.all.each do |room| %>
     <div>
       <%= room.name   %> room
+      <%= link_to "Room", room_messages_path(room) %>
     </div>
   <% end %>
 
